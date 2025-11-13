@@ -448,3 +448,24 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+/* ===== FIX: ESTILO DE BOTONES EN EVENTOS ===== */
+.event-info a {
+  background: var(--white);
+  color: var(--black);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.event-info a:hover {
+  background: var(--neon-blue);
+  color: var(--black);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
