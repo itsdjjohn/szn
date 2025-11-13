@@ -19,7 +19,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,10 +35,11 @@ header .logo {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.7rem;
   color: var(--white);
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .header-right img {
@@ -117,9 +118,9 @@ h1 {
 }
 h1 .highlight { 
   background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .description { max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.1rem; color: var(--silver); line-height: 1.7; }
 .btn { 
@@ -247,34 +248,24 @@ footer { background: var(--black); padding: 4rem 0; text-align: center; border-t
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  /* HEADER FIX */
   header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1rem;
-    gap: 0.5rem;
-    text-align: center;
+    padding: 0.8rem 1.5rem;
+    justify-content: space-between;
   }
 
   header .logo {
     width: 70px;
-    height: auto;
   }
 
   .header-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
   }
 
   .header-right img {
-    width: 60px;
-    height: auto;
+    width: 70px;
   }
 
-  /* HERO FIX */
   .hero {
     height: 90vh;
     min-height: 560px;
