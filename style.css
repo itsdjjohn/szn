@@ -289,9 +289,9 @@ body {
 /* GRID DE EVENTOS */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 540px));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  justify-content: center;
+  justify-items: center;
 }
 
 .event-item {
