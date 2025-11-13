@@ -128,10 +128,13 @@ body {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 55vh;
+  height: 100vh;
   min-height: 520px;
   overflow: hidden;
-  padding-top: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-video,
@@ -143,6 +146,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.6);
+  z-index: 0;
 }
 
 .overlay {
@@ -151,37 +155,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent 30%, var(--black) 100%);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding-top: 8vh;
-  max-width: 900px;
-  margin: 0 auto;
+  color: var(--white);
+  max-width: 700px;
+  padding: 0 2rem;
 }
 
-/* LOGO HERO */
-.logo {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto 2.5rem;
-  max-width: 20vw;
-}
-
-/* TEXTOS */
-h1 {
+.hero h1 {
   font-family: 'Sequel Sans', sans-serif;
-  font-size: 4.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
-h1 .highlight {
+.hero .highlight {
   background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
   background-clip: text;
   -webkit-background-clip: text;
@@ -189,15 +183,15 @@ h1 .highlight {
   color: transparent;
 }
 
-.description {
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
+.hero .description {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
   color: var(--silver);
   line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
-.btn {
+.hero .btn {
   background: var(--white);
   color: var(--black);
   padding: 1rem 2.8rem;
@@ -209,7 +203,7 @@ h1 .highlight {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.btn:hover {
+.hero .btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
@@ -269,12 +263,8 @@ h1 .highlight {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===== SECCIONES ===== */
@@ -409,21 +399,20 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
-    min-height: 420px;
+    height: auto;
+    padding: 8rem 1rem 6rem;
   }
 
   .hero-content {
-    padding-top: 6vh;
+    padding: 0 1rem;
   }
 
-  h1 {
-    font-size: 2.8rem;
+  .hero h1 {
+    font-size: 2rem;
   }
 
-  .logo {
-    width: 80px;
-    margin-bottom: 1.8rem;
+  .hero .description {
+    font-size: 1rem;
   }
 
   .section-title {
