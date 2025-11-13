@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SZN | Come for the music, stay for the vibes</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Sequel+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="header-left">
+        <img src="assets/logo-white.svg" alt="SZN Logo" class="header-logo" />
+      </div>
+
+      <!-- Menú vacío (sin ítems por ahora) -->
+      <nav class="header-nav">
+        <ul></ul>
+      </nav>
+
+      <!-- Powered by Bubbl -->
+      <div class="header-right">
+        <span>Tickets powered by</span>
+        <img src="assets/bubbl.png" alt="Bubbl logo" class="bubbl-logo" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <img src="assets/logo-white.svg" alt="SZN Loading" class="preloader-logo">
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+      <img src="assets/hero-fallback.jpg" alt="SZN Vibes">
+    </video>
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <!-- Logo eliminado -->
+      <h1>Come for the music,<br><span class="highlight">stay for the vibes.</span></h1>
+      <p class="description">
+        SZN is an event organizer based in Panama focused on creating high-quality nightlife experiences. 
+        Each event delivers energy, music and atmosphere for a young, diverse crowd.
+      </p>
+      <a href="#events" class="btn">View Upcoming Events</a>
+    </div>
+  </section>
+
+  <!-- ===== CINTA ===== -->
+  <div class="ticker">
+    <div class="ticker-content">
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+      <span>FOLLOW US @SZNPANAMA</span>
+    </div>
+  </div>
+
+  <!-- ===== EVENTS ===== -->
+  <section class="events" id="events">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid" id="events-grid">
+        <p class="loading">Cargando eventos...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">We build stories through music.</h2>
+      <div class="about-media">
+        <video autoplay muted loop playsinline>
+          <source src="assets/about-ambience.mp4" type="video/mp4">
+          <img src="assets/about-fallback.jpg" alt="SZN Atmosphere">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <img src="assets/logo-white.svg" alt="SZN" class="footer-logo">
+      <div class="socials">
+        <a href="https://instagram.com/sznpanama" target="_blank" aria-label="Instagram">
+          <img src="assets/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://bubbl.so/szn" target="_blank" aria-label="Bubbl">
+          <img src="assets/bubbl.png" alt="Bubbl" class="social-icon">
+        </a>
+      </div>
+      <p class="copyright">© 2025 SZN Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
