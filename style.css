@@ -12,42 +12,7 @@ body { font-family: 'Montserrat', sans-serif; background: var(--black); color: v
 .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
 html { scroll-behavior: smooth; }
 
-/* ================= HEADER ================= */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  backdrop-filter: blur(8px);
-}
-
-header .logo {
-  width: 90px;
-  height: auto;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  color: var(--white);
-  font-weight: 600;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-.header-right img {
-  width: 90px;
-  height: auto;
-}
-
-/* ================= PRELOADER ================= */
+/* PRELOADER */
 #preloader {
   position: fixed;
   top: 0; left: 0;
@@ -69,16 +34,49 @@ header .logo {
   50% { transform: scale(1.1); }
 }
 
-/* ================= HERO ================= */
+/* HEADER */
+.main-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: transparent;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-header {
+  width: 80px;
+  height: auto;
+}
+.powered {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.powered span {
+  font-size: 0.8rem;
+  color: var(--white);
+  opacity: 0.9;
+}
+.bubbl-logo {
+  height: 18px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* HERO */
 .hero { 
   position: relative; 
   height: 100vh; 
   min-height: 520px; 
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 .hero-video, .hero img { 
   position: absolute; top: 0; left: 0; 
@@ -95,22 +93,13 @@ header .logo {
   position: relative; 
   z-index: 2; 
   text-align: center; 
-  padding-top: 8vh; 
+  padding-top: 28vh; 
   max-width: 900px; 
   margin: 0 auto;
 }
 
-/* LOGO HERO */
-.logo { 
-  width: 100px; 
-  height: auto; 
-  display: block; 
-  margin: 0 auto 2.5rem; 
-  max-width: 20vw;
-}
-
 h1 { 
-  font-family: 'Sequel Sans', sans-serif; 
+  font-family: 'Montserrat', sans-serif; 
   font-size: 4.5rem; 
   line-height: 1.1; 
   margin-bottom: 1.5rem; 
@@ -119,18 +108,33 @@ h1 {
 h1 .highlight { 
   background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); 
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
-.description { max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.1rem; color: var(--silver); line-height: 1.7; }
+.description { 
+  max-width: 700px; 
+  margin: 0 auto 2.5rem; 
+  font-size: 1.1rem; 
+  color: var(--silver); 
+  line-height: 1.7; 
+}
 .btn { 
-  background: var(--white); color: var(--black); padding: 1rem 2.8rem; border-radius: 50px; 
-  font-weight: 700; text-decoration: none; display: inline-block; transition: 0.4s; 
+  background: var(--white); 
+  color: var(--black); 
+  padding: 1rem 2.8rem; 
+  border-radius: 50px; 
+  font-weight: 700; 
+  text-decoration: none; 
+  display: inline-block; 
+  transition: 0.4s; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-.btn:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+.btn:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5); 
+}
 
-/* ================= TICKER ================= */
+/* CINTA */
 .ticker {
   background: var(--white);
   padding: 0.9rem 0;
@@ -155,21 +159,21 @@ h1 .highlight {
   100% { transform: translateX(-50%); }
 }
 
-/* ================= SECCIONES ================= */
+/* SECCIONES */
 .events, .about { padding: 8rem 0; }
 .section-title { 
-  font-family: 'Sequel Sans', sans-serif; 
+  font-family: 'Montserrat', sans-serif; 
   font-size: 3rem; 
   text-align: center; 
   margin-bottom: 4rem; 
   background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); 
   background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
   font-weight: 700;
 }
 
-/* ================= GRID DE EVENTOS ================= */
+/* GRID DE EVENTOS */
 .events-grid { 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(300px, 540px)); 
@@ -202,7 +206,7 @@ h1 .highlight {
   width: 100%;
 }
 .event-info h3 {
-  font-family: 'Sequel Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   color: var(--white);
   margin-bottom: 0.5rem;
@@ -219,7 +223,7 @@ h1 .highlight {
   font-size: 0.95rem;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about-media { 
   max-width: 800px; 
   margin: 0 auto; 
@@ -227,12 +231,23 @@ h1 .highlight {
   overflow: hidden; 
   box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
 }
-.about-media video, .about-media img { width: 100%; height: auto; }
+.about-media video, 
+.about-media img { width: 100%; height: auto; }
 
-/* ================= FOOTER ================= */
-footer { background: var(--black); padding: 4rem 0; text-align: center; border-top: 1px solid #222; }
+/* FOOTER */
+footer { 
+  background: var(--black); 
+  padding: 4rem 0; 
+  text-align: center; 
+  border-top: 1px solid #222; 
+}
 .footer-logo { width: 60px; margin-bottom: 1rem; }
-.socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+.socials { 
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  margin-bottom: 1rem; 
+}
 .social-icon { 
   width: 36px; 
   height: 36px; 
@@ -246,61 +261,51 @@ footer { background: var(--black); padding: 4rem 0; text-align: center; border-t
 }
 .copyright { color: var(--silver); font-size: 0.9rem; }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  header {
-    padding: 0.8rem 1.5rem;
-    justify-content: space-between;
-  }
-
-  header .logo {
-    width: 70px;
-  }
-
-  .header-right {
-    font-size: 0.8rem;
-    gap: 0.5rem;
-  }
-
-  .header-right img {
-    width: 70px;
-  }
-
   .hero {
     height: 90vh;
-    min-height: 560px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 0;
+    min-height: 600px;
   }
 
   .hero-content {
-    padding-top: 0;
+    padding-top: 18vh;
     text-align: center;
-    width: 90%;
   }
 
-  .hero-content h1 {
+  h1 {
     font-size: 2.4rem;
-    line-height: 1.1;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
   }
 
-  .hero-content .description {
+  .description {
     font-size: 1rem;
     line-height: 1.6;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
   }
 
   .btn {
-    padding: 0.9rem 2rem;
-    font-size: 0.95rem;
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
   }
 
-  .section-title { font-size: 2.3rem; }
+  .logo-header {
+    width: 70px;
+  }
+
+  .powered span {
+    font-size: 0.7rem;
+  }
+
+  .bubbl-logo {
+    height: 16px;
+  }
+
   .events, .about { padding: 4rem 0; }
   .events-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .event-item { width: 100%; max-width: 400px; }
   .event-image { width: 100%; height: 400px; max-width: 400px; }
   .event-info h3 { font-size: 1.4rem; }
-  .ticker { font-size: 0.95rem; }
 }
